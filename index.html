@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FitCare Guide - Trusted Health & Fitness Information for Everyone. Explore health articles, fitness guides, nutrition tips, and find doctor information near you.">
+    <meta name="keywords" content="health, fitness, nutrition, doctors, healthcare, BMI calculator, wellness, medical information">
+    <meta name="author" content="FitCare Guide">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="FitCare Guide - Trusted Health & Fitness Information">
+    <meta property="og:description" content="Explore health articles, fitness guides, nutrition tips, and find doctor information near you.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fitcareguide.com">
+    <meta property="og:image" content="https://fitcareguide.com/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FitCare Guide - Trusted Health & Fitness Information">
+    <meta name="twitter:description" content="Explore health articles, fitness guides, nutrition tips, and find doctor information near you.">
+    <link rel="canonical" href="https://fitcareguide.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>FitCare Guide - Trusted Health & Fitness Information for Everyone</title>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalWebPage",
+        "name": "FitCare Guide",
+        "description": "Trusted Health & Fitness Information for Everyone",
+        "url": "https://fitcareguide.com",
+        "medicalSpecialty": "Primary Care",
+        "about": {
+            "@type": "Thing",
+            "name": "Health and Fitness Information"
+        }
+    }
+    </script>
+    <!-- Favicon SVG -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💚</text></svg>">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loader" class="loader" role="status" aria-label="Loading">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">FitCare Guide</div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar" role="banner">
+        <div class="container navbar-container">
+            <a href="#home" class="logo" aria-label="FitCare Guide Home">
+                <i class="fas fa-heartbeat logo-icon"></i>
+                <span class="logo-text">FitCare Guide</span>
+            </a>
+            <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#doctors" class="nav-link">Doctors</a></li>
+                    <li><a href="#specialities" class="nav-link">Specialities</a></li>
+                    <li><a href="#fitness" class="nav-link">Fitness</a></li>
+                    <li><a href="#nutrition" class="nav-link">Nutrition</a></li>
+                    <li><a href="#library" class="nav-link">Health Library</a></li>
+                    <li><a href="#calculators" class="nav-link">Calculators</a></li>
+                    <li><a href="#blog" class="nav-link">Blog</a></li>
+                    <li><a href="#faq" class="nav-link">FAQs</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <div class="search-toggle" id="searchToggle" aria-label="Toggle search" role="button" tabindex="0">
+                    <i class="fas fa-search"></i>
+                </div>
+                <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <!-- Search Bar -->
+        <div class="search-bar" id="searchBar">
+            <div class="container">
+                <div class="search-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search health articles, doctors, fitness guides..." aria-label="Search" autocomplete="off">
+                    <button class="search-close" id="searchClose" aria-label="Close search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="search-suggestions" id="searchSuggestions"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" id="home" aria-label="Hero banner">
+            <div class="hero-bg"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-badge">Trusted Health Resource</span>
+                    <h1 class="hero-title">Your Trusted Health & Fitness Information Portal</h1>
+                    <p class="hero-subtitle">Explore health articles, fitness guides, nutrition tips, and find doctor information near you. Empowering you with knowledge for a healthier life.</p>
+                    <div class="hero-buttons">
+                        <a href="#library" class="btn btn-primary hero-btn">Explore Articles</a>
+                        <a href="#doctors" class="btn btn-secondary hero-btn">Find Doctors</a>
+                        <a href="#fitness" class="btn btn-outline hero-btn">Fitness Guides</a>
+                    </div>
+                    <div class="hero-search-box">
+                        <div class="hero-search-wrapper">
+                            <i class="fas fa-search hero-search-icon"></i>
+                            <input type="text" id="heroSearch" class="hero-search-input" placeholder="Search for health topics, doctors, or fitness tips..." aria-label="Search health topics" autocomplete="off">
+                            <button class="btn btn-primary hero-search-btn" id="heroSearchBtn">Search</button>
+                        </div>
+                        <div class="search-suggestions" id="heroSearchSuggestions"></div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Ccircle cx='250' cy='250' r='200' fill='%2322C55E22'/%3E%3Cpath d='M180 250 L240 310 L320 200' stroke='%2322C55E' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='350' cy='150' r='30' fill='%232563EB33'/%3E%3Ccircle cx='120' cy='180' r='20' fill='%2322C55E33'/%3E%3Ccircle cx='380' cy='340' r='25' fill='%232563EB22'/%3E%3C/svg%3E"
+                           alt="Health and wellness illustration"
+                           loading="eager"
+                           class="hero-img">
+                </div>
+            </div>
+            <div class="hero-wave">
+                <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+                    <path d="M0,50 C240,100 480,0 720,50 C960,100 1200,0 1440,50 L1440,100 L0,100 Z" fill="var(--bg-primary)"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- SEARCH RESULTS -->
+        <section class="section search-results-section" id="searchResultsSection" aria-label="Search results" style="display:none;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="searchResultsTitle">Search Results</h2>
+                    <p class="section-subtitle" id="searchResultsSubtitle"></p>
+                </div>
+                <div class="search-results-grid" id="searchResultsGrid"></div>
+            </div>
+        </section>
+
+        <!-- QUICK SERVICES -->
+        <section class="section quick-services" id="services" aria-label="Quick services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Quick Services</h2>
+                    <p class="section-subtitle">Everything you need for a healthier life, all in one place.</p>
+                </div>
+                <div class="services-grid">
+                    <a href="#doctors" class="service-card glassmorphism">
+                        <div class="service-icon"><i class="fas fa-user-md"></i></div>
+                        <h3 class="service-title">Find Doctors</h3>
+                        <p class="service-desc">Browse our directory of qualified healthcare professionals.</p>
+                    </a>
+                    <a href="#library" class="service-card glassmorphism">
+                        <div class="service-icon"><i class="fas fa-notes-medical"></i></div>
+                        <h3 class="service-title">Health Articles</h3>
+                        <p class="service-desc">Read evidence-based health and wellness information.</p>
+                    </a>
+                    <a href="#fitness" class="service-card glassmorphism">
+                        <div class="service-icon"><i class="fas fa-dumbbell"></i></div>
+                        <h3 class="service-title">Fitness Guides</h3>
+                        <p class="service-desc">Workout plans and exercise guides for all levels.</p>
+                    </a>
+                    <a href="#nutrition" class="service-card glassmorphism">
+                        <div class="service-icon"><i class="fas fa-apple-alt"></i></div>
+                        <h3 class="service-title">Nutrition</h3>
+                        <p class="service-desc">Healthy eating tips and diet plans for better health.</p>
+                    </a>
+                    <a href="#calculators" class="service-card glassmorphism">
+                        <div class="service-icon"><i class="fas fa-calculator"></i></div>
+                        <h3 class="service-title">BMI Calculator</h3>
+                        <p class="service-desc">Calculate your Body Mass Index and track your health.</p>
+                    </a>
+                    <a href="#fitness" class="service-card glassmorphism">
+                        <div class="service-icon"><i class="fas fa-book-open"></i></div>
+                        <h3 class="service-title">Workout Library</h3>
+                        <p class="service-desc">Access a variety of workout routines and exercises.</p>
+                    </a>
+                    <a href="#nutrition" class="service-card glassmorphism">
+                        <div class="service-icon"><i class="fas fa-utensils"></i></div>
+                        <h3 class="service-title">Healthy Recipes</h3>
+                        <p class="service-desc">Delicious and nutritious recipes for every meal.</p>
+                    </a>
+                    <a href="#library" class="service-card glassmorphism">
+                        <div class="service-icon"><i class="fas fa-ambulance"></i></div>
+                        <h3 class="service-title">Emergency Tips</h3>
+                        <p class="service-desc">Essential first aid and emergency preparedness guides.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOCTORS DIRECTORY -->
+        <section class="section doctors" id="doctors" aria-label="Doctor directory">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Doctor Directory</h2>
+                    <p class="section-subtitle">Find qualified healthcare professionals in your area. Please contact clinics directly for appointments.</p>
+                    <div class="doctor-notice glassmorphism">
+                        <i class="fas fa-info-circle"></i>
+                        <p><strong>Important:</strong> Please contact the clinic directly for appointments. We do not offer online booking or payments.</p>
+                    </div>
+                </div>
+                <div class="doctors-grid" id="doctorsGrid">
+                    <!-- Doctor cards will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SPECIALITIES -->
+        <section class="section specialities" id="specialities" aria-label="Medical specialities">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Medical Specialities</h2>
+                    <p class="section-subtitle">Explore various medical specialities and find the right expert for your needs.</p>
+                </div>
+                <div class="specialities-grid" id="specialitiesGrid">
+                    <!-- Specialities loaded by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- FITNESS -->
+        <section class="section fitness" id="fitness" aria-label="Fitness guides">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Fitness Guides</h2>
+                    <p class="section-subtitle">Expert fitness advice and workout plans for every goal and fitness level.</p>
+                </div>
+                <div class="fitness-grid" id="fitnessGrid">
+                    <!-- Fitness categories loaded by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- NUTRITION -->
+        <section class="section nutrition" id="nutrition" aria-label="Nutrition guides">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nutrition & Diet</h2>
+                    <p class="section-subtitle">Expert nutrition advice, healthy eating plans, and dietary tips for better health.</p>
+                </div>
+                <div class="nutrition-grid" id="nutritionGrid">
+                    <!-- Nutrition categories loaded by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- HEALTH LIBRARY -->
+        <section class="section library" id="library" aria-label="Health library">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Health Library</h2>
+                    <p class="section-subtitle">Comprehensive health information covering a wide range of conditions and wellness topics.</p>
+                    <div class="library-categories" id="libraryCategories">
+                        <!-- Category filters loaded by JS -->
+                    </div>
+                </div>
+                <div class="library-grid" id="libraryGrid">
+                    <!-- Health articles loaded by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CALCULATORS -->
+        <section class="section calculators" id="calculators" aria-label="Health calculators">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Health Calculators</h2>
+                    <p class="section-subtitle">Use our free health calculators to track your wellness metrics.</p>
+                </div>
+                <div class="calculators-grid">
+                    <!-- BMI Calculator -->
+                    <div class="calculator-card glassmorphism" id="bmiCalculator">
+                        <div class="calculator-header">
+                            <i class="fas fa-weight"></i>
+                            <h3>BMI Calculator</h3>
+                        </div>
+                        <div class="calculator-body">
+                            <div class="form-group">
+                                <label for="bmiWeight">Weight (kg)</label>
+                                <input type="number" id="bmiWeight" class="form-input" placeholder="e.g. 70" min="1" max="500">
+                            </div>
+                            <div class="form-group">
+                                <label for="bmiHeight">Height (cm)</label>
+                                <input type="number" id="bmiHeight" class="form-input" placeholder="e.g. 175" min="1" max="300">
+                            </div>
+                            <button class="btn btn-primary calc-btn" id="calcBmi">Calculate BMI</button>
+                            <div class="calc-result" id="bmiResult">
+                                <div class="result-value" id="bmiValue">--</div>
+                                <div class="result-label" id="bmiLabel">Enter your details</div>
+                                <div class="result-bar" id="bmiBar">
+                                    <div class="result-bar-fill" id="bmiBarFill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BMR Calculator -->
+                    <div class="calculator-card glassmorphism" id="bmrCalculator">
+                        <div class="calculator-header">
+                            <i class="fas fa-fire"></i>
+                            <h3>BMR Calculator</h3>
+                        </div>
+                        <div class="calculator-body">
+                            <div class="form-group">
+                                <label for="bmrAge">Age</label>
+                                <input type="number" id="bmrAge" class="form-input" placeholder="e.g. 30" min="1" max="150">
+                            </div>
+                            <div class="form-group">
+                                <label for="bmrWeight">Weight (kg)</label>
+                                <input type="number" id="bmrWeight" class="form-input" placeholder="e.g. 70" min="1" max="500">
+                            </div>
+                            <div class="form-group">
+                                <label for="bmrHeight">Height (cm)</label>
+                                <input type="number" id="bmrHeight" class="form-input" placeholder="e.g. 175" min="1" max="300">
+                            </div>
+                            <div class="form-group">
+                                <label for="bmrGender">Gender</label>
+                                <select id="bmrGender" class="form-input">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-primary calc-btn" id="calcBmr">Calculate BMR</button>
+                            <div class="calc-result" id="bmrResult">
+                                <div class="result-value" id="bmrValue">--</div>
+                                <div class="result-label">Calories/day</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Daily Calories Calculator -->
+                    <div class="calculator-card glassmorphism" id="caloriesCalculator">
+                        <div class="calculator-header">
+                            <i class="fas fa-utensils"></i>
+                            <h3>Daily Calories</h3>
+                        </div>
+                        <div class="calculator-body">
+                            <div class="form-group">
+                                <label for="calAge">Age</label>
+                                <input type="number" id="calAge" class="form-input" placeholder="e.g. 30" min="1" max="150">
+                            </div>
+                            <div class="form-group">
+                                <label for="calWeight">Weight (kg)</label>
+                                <input type="number" id="calWeight" class="form-input" placeholder="e.g. 70" min="1" max="500">
+                            </div>
+                            <div class="form-group">
+                                <label for="calHeight">Height (cm)</label>
+                                <input type="number" id="calHeight" class="form-input" placeholder="e.g. 175" min="1" max="300">
+                            </div>
+                            <div class="form-group">
+                                <label for="calGender">Gender</label>
+                                <select id="calGender" class="form-input">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="calActivity">Activity Level</label>
+                                <select id="calActivity" class="form-input">
+                                    <option value="1.2">Sedentary (little exercise)</option>
+                                    <option value="1.375">Light (1-3 days/week)</option>
+                                    <option value="1.55">Moderate (3-5 days/week)</option>
+                                    <option value="1.725">Active (6-7 days/week)</option>
+                                    <option value="1.9">Very Active (intense daily)</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-primary calc-btn" id="calcCalories">Calculate Calories</button>
+                            <div class="calc-result" id="caloriesResult">
+                                <div class="result-value" id="caloriesValue">--</div>
+                                <div class="result-label">Calories/day</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Water Intake Calculator -->
+                    <div class="calculator-card glassmorphism" id="waterCalculator">
+                        <div class="calculator-header">
+                            <i class="fas fa-tint"></i>
+                            <h3>Water Intake</h3>
+                        </div>
+                        <div class="calculator-body">
+                            <div class="form-group">
+                                <label for="waterWeight">Weight (kg)</label>
+                                <input type="number" id="waterWeight" class="form-input" placeholder="e.g. 70" min="1" max="500">
+                            </div>
+                            <div class="form-group">
+                                <label for="waterActivity">Activity Level</label>
+                                <select id="waterActivity" class="form-input">
+                                    <option value="0">Sedentary</option>
+                                    <option value="0.3">Light Activity</option>
+                                    <option value="0.5">Moderate Activity</option>
+                                    <option value="0.7">Heavy Activity</option>
+                                    <option value="1">Very Heavy Activity</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-primary calc-btn" id="calcWater">Calculate Water Intake</button>
+                            <div class="calc-result" id="waterResult">
+                                <div class="result-value" id="waterValue">--</div>
+                                <div class="result-label">Liters/day</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Protein Calculator -->
+                    <div class="calculator-card glassmorphism" id="proteinCalculator">
+                        <div class="calculator-header">
+                            <i class="fas fa-drumstick-bite"></i>
+                            <h3>Protein Intake</h3>
+                        </div>
+                        <div class="calculator-body">
+                            <div class="form-group">
+                                <label for="proteinWeight">Weight (kg)</label>
+                                <input type="number" id="proteinWeight" class="form-input" placeholder="e.g. 70" min="1" max="500">
+                            </div>
+                            <div class="form-group">
+                                <label for="proteinGoal">Goal</label>
+                                <select id="proteinGoal" class="form-input">
+                                    <option value="1.2">General Health</option>
+                                    <option value="1.6">Weight Loss</option>
+                                    <option value="1.8">Muscle Gain</option>
+                                    <option value="2.2">Athlete</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-primary calc-btn" id="calcProtein">Calculate Protein</button>
+                            <div class="calc-result" id="proteinResult">
+                                <div class="result-value" id="proteinValue">--</div>
+                                <div class="result-label">Grams/day</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG -->
+        <section class="section blog" id="blog" aria-label="Health blog">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Latest From Our Blog</h2>
+                    <p class="section-subtitle">Stay updated with the latest health news, fitness tips, and wellness advice.</p>
+                </div>
+                <div class="blog-grid" id="blogGrid">
+                    <!-- Blog posts loaded by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section faq" id="faq" aria-label="Frequently asked questions">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Find answers to common questions about health, fitness, and our website.</p>
+                </div>
+                <div class="faq-container" id="faqContainer">
+                    <!-- FAQ items loaded by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section class="section newsletter" id="newsletter" aria-label="Newsletter subscription">
+            <div class="container">
+                <div class="newsletter-card glassmorphism">
+                    <div class="newsletter-content">
+                        <h2 class="newsletter-title">Stay Informed & Healthy</h2>
+                        <p class="newsletter-desc">Subscribe to our newsletter for the latest health tips, fitness guides, and wellness advice delivered to your inbox.</p>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <div class="newsletter-input-group">
+                                <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email for newsletter">
+                                <button type="submit" class="btn btn-primary newsletter-btn">Subscribe</button>
+                            </div>
+                            <p class="newsletter-disclaimer">We respect your privacy. No spam. Unsubscribe anytime.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section about" id="about" aria-label="About us">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About FitCare Guide</h2>
+                    <p class="section-subtitle">Our mission is to provide reliable health and fitness information to everyone.</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-text glassmorphism">
+                        <h3>Our Mission</h3>
+                        <p>FitCare Guide is dedicated to providing trustworthy, evidence-based health and fitness information to help you make informed decisions about your wellbeing. We believe that everyone deserves access to quality health education.</p>
+                        <h3>What We Offer</h3>
+                        <ul class="about-list">
+                            <li><i class="fas fa-check-circle"></i> Comprehensive health articles and guides</li>
+                            <li><i class="fas fa-check-circle"></i> Fitness programs for all levels</li>
+                            <li><i class="fas fa-check-circle"></i> Nutrition advice and meal plans</li>
+                            <li><i class="fas fa-check-circle"></i> Doctor directory for your convenience</li>
+                            <li><i class="fas fa-check-circle"></i> Free health calculators and tools</li>
+                            <li><i class="fas fa-check-circle"></i> Latest health news and research updates</li>
+                        </ul>
+                        <h3>Our Commitment</h3>
+                        <p>We are committed to providing accurate, up-to-date, and actionable health information. Our content is reviewed for accuracy and designed to empower you on your health journey. Always consult with a qualified healthcare professional for medical advice.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card glassmorphism">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Health Articles</div>
+                        </div>
+                        <div class="stat-card glassmorphism">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Doctor Profiles</div>
+                        </div>
+                        <div class="stat-card glassmorphism">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">Fitness Guides</div>
+                        </div>
+                        <div class="stat-card glassmorphism">
+                            <div class="stat-number">10K+</div>
+                            <div class="stat-label">Daily Visitors</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section contact" id="contact" aria-label="Contact us">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contact Us</h2>
+                    <p class="section-subtitle">Have questions or suggestions? We'd love to hear from you.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info glassmorphism">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>fitcareguider@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>Newtown Kolkata, India</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form glassmorphism" id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Full Name</label>
+                            <input type="text" id="contactName" class="form-input" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address</label>
+                            <input type="email" id="contactEmail" class="form-input" placeholder="Your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subject</label>
+                            <input type="text" id="contactSubject" class="form-input" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" class="form-input form-textarea" rows="5" placeholder="Your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary contact-submit">Send Message</button>
+                    </form>
+                </div>
+                <!-- Google Maps Embed Placeholder -->
+                <div class="map-container glassmorphism">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Find Us Here</h3>
+                        <p>Newtown Kolkata, India</p>
+                        <a href="https://maps.google.com/?q=Newtown+Kolkata+India" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Open in Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <a href="#home" class="footer-logo">
+                        <i class="fas fa-heartbeat"></i>
+                        FitCare Guide
+                    </a>
+                    <p>Trusted Health & Fitness Information for Everyone. Empowering you with knowledge for a healthier life.</p>
+                    <div class="footer-social">
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#doctors">Doctors</a></li>
+                        <li><a href="#specialities">Specialities</a></li>
+                        <li><a href="#fitness">Fitness</a></li>
+                        <li><a href="#nutrition">Nutrition</a></li>
+                        <li><a href="#library">Health Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#calculators">Calculators</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#faq">FAQs</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#newsletter">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Medical Disclaimer</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2026 FitCare Guide. All rights reserved.</p>
+                    <p class="footer-disclaimer">This website is for educational and informational purposes only. The information provided should not replace professional medical advice. Always consult a qualified healthcare professional. Doctor information is provided for convenience. Please contact the clinic directly before visiting.</p>
+                    <p class="footer-credit">Designed & Developed with <i class="fas fa-heart" style="color: #ef4444;"></i> by Sambhav Kumar</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle toast-icon"></i>
+            <span class="toast-message" id="toastMessage">Success!</span>
+        </div>
+        <button class="toast-close" id="toastClose">&times;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>ontact us 
